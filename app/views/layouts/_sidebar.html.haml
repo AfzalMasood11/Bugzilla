@@ -1,0 +1,12 @@
+/ Sidebar
+#sidebar-wrapper
+  %ul.sidebar-nav
+    %li.sidebar-brand
+      %a{:href => "#"}
+        Home
+    - if user_signed_in?
+      %li
+        %a{:href => "#"} Bugs
+      %li
+        = link_to "User", users_path
+/ /#sidebar-wrapper
