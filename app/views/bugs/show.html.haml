@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @bug.title
+%p
+  %b Description:
+  = @bug.description
+%p
+  %b Status:
+  = @bug.status
+%p
+  %b Owner:
+  = @bug.user.name
+%p
+  %b Assignees:
+  - @bug.assignees.each do |assignee|
+    = "#{assignee.name},"
+
+
+= link_to 'Edit', edit_bug_path(@bug)
+\|
+= link_to 'Back', bugs_path

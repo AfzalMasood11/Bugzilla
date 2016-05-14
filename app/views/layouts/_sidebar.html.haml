@@ -6,7 +6,7 @@
         Home
     - if user_signed_in?
       %li
-        %a{:href => "#"} Bugs
+        =link_to 'Bugs', bugs_path
       %li
-        = link_to "User", users_path
+        =link_to 'User', users_path
 / /#sidebar-wrapper
